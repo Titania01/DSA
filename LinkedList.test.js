@@ -31,6 +31,18 @@ describe("#getByIndex", () => {
   });
 
   describe("with index 0", () => {
-    test("it returns the head");
+    test("it returns the head", () => {
+      const nll = LinkedList.fromValues(10, 20);
+
+      expect(nll.getByIndex(0).value).toBe(10);
+    });
+  });
+
+  describe("with index in the middle ", () => {
+    test("it returns the element at that index", () => {
+      const nll = LinkedList.fromValues(10, 20, 30, 40);
+
+      expect(nll.getByIndex(2).value).toBe(30);
+    });
   });
 });

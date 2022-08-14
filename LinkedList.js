@@ -19,6 +19,16 @@ class LinkedList {
     }
     return current;
   }
+
+  print() {
+    let output = "";
+    let current = this.head;
+    while (current) {
+      output = `${output}${current.value} ->`;
+      current.next;
+    }
+    console.log(`${output}null`);
+  }
 }
 
 class LinkedListNode {
